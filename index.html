@@ -73,7 +73,8 @@
       <section class="hero">
         <div class="header-overlay">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="hero-link">Заказать услугу</a>
+          <!-- <a href="" class="hero-link" data-modal-open>Заказать услугу</a> -->
+          <button class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -492,5 +493,33 @@
         </div>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est hic optio
+          dicta pariatur nostrum sequi aspernatur itaque dolorem veniam delectus
+          voluptatum eveniet ipsa exercitationem velit, sint, blanditiis
+          obcaecati cum dolores, accusamus culpa sed. Facilis fuga incidunt
+          explicabo eaque? Autem nulla quod sapiente, dolores fugit nostrum
+          accusantium architecto reiciendis quia! Earum quae eligendi incidunt
+          assumenda labore debitis molestiae! Itaque blanditiis minus ipsam
+          illum maiores quam ipsa, omnis sapiente aut tempora quia officia
+          explicabo officiis facere, quos tenetur, esse odit saepe laudantium?
+          Iusto incidunt nihil laborum similique nostrum est ratione asperiores
+          quisquam sit? Fuga quisquam quae velit corrupti debitis voluptate
+          quibusdam minus.
+        </p>
+        <button class="modal-close-button" data-modal-close>
+          <svg class="modal-close-svg" width="30" height="30">
+            <use href="./images/logo-svg/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
