@@ -60,7 +60,6 @@ body {
 /* Стилизация разделов с фоном, отличным от основного */
 
 .team {
-  /* max-width: 1600px; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -144,7 +143,6 @@ button {
   position: absolute;
   content: '';
   display: block;
-  /* top: 77px; */
   bottom: -1px;
   width: 100%;
   height: 4px;
@@ -590,7 +588,6 @@ button {
 /* Подвал */
 
 .footer {
-  /* width: 1600px; */
   margin-left: auto;
   margin-right: auto;
   min-height: 252px;
@@ -869,11 +866,16 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.backdrop.is-hidden > .modal {
+  opacity: 0;
 }
 
 .modal {
@@ -883,11 +885,19 @@ button {
   transform: translate(-50%, -50%);
 
   padding: 40px;
-
   width: 528px;
-  min-height: 581px;
+  height: 581px;
+  max-height: 100vh;
 
-  background-color: #fff;
+  background-color: var(--main-background-color);
+
+  overflow-y: auto;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: opacity 250ms ease-in;
 }
 
 .modal-close-button {
